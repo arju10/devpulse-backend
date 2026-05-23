@@ -30,7 +30,7 @@ export interface IssueWithReporter extends IssueRecord {
 }
 
 export interface IssueQueryParams {
-  sort?: 'newest' | 'oldest' | undefined;
-  type?: 'bug' | 'feature_request' | undefined;
-  status?: 'open' | 'in_progress' | 'resolved' | undefined;
+  sort?: "newest" | "oldest" | undefined;
+  type?: "bug" | "feature_request" | undefined;
+  status?: "open" | "in_progress" | "resolved" | undefined;
 }
