@@ -5,7 +5,7 @@ import express, {
 } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import pool from "./config/db";
+import authRoutes from "./modules/auth/auth.routes";
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-// HEre we will add all the routes for our application, for now we have only one route for health check, but in future we will add more routes for user authentication, project management, task management, etc.
+app.use('/api/auth', authRoutes);
 
 // Health check
 app.get("/", (req: Request, res: Response) => {
